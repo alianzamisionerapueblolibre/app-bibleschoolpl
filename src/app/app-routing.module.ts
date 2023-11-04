@@ -13,15 +13,19 @@ const routes: Routes = [
       }
     ]
   },
+  // {
+  //   path: '', component: FullWidthComponent,
+  //   children: [
+  //     { path: '', redirectTo: '/login', pathMatch: 'full' },
+  //     {
+  //       path: 'login',
+  //       loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+  //     }
+  //   ]
+  // }
   {
-    path: '', component: FullWidthComponent,
-    children: [
-      { path: '', redirectTo: '/login', pathMatch: 'full' },
-      {
-        path: 'login',
-        loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
-      }
-    ]
+    path: 'login',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   }
 ];
 
